@@ -92,3 +92,27 @@ $(document).ready(function(){
       $("#showpiglatin").text(pigLatin);
     })
   })
+
+  //Binary Converter
+var binaryToDecimal = function(number){
+  var splitNumbers = number.split("");
+  var outputNumber = 0;
+  var exponent = splitNumbers.length-1;
+  for(var i=0;i<splitNumbers.length;i++){
+    if(splitNumbers[i]==='1'){
+      outputNumber += Math.pow(2,exponent);
+    }
+    exponent--;
+  }
+  return outputNumber;
+}
+
+$(document).ready(function(){
+  $("#binary-form").submit(function(event){
+      event.preventDefault();
+    var inputUser = $("#number").val();
+    var result = binaryToDecimal(inputUser);
+    $("#binary").text(result);
+
+  });
+});
