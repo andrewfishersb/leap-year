@@ -37,9 +37,58 @@ $(document).ready(function(){
       return false;
     }
     //need to figure out how to work when with words
+  };
+
+// finds vowels
+  var indexOfFirstVowel = function(word){
+    var vowelIndex = /[aieou]/i.exec(word);
+    return vowelIndex.index;
   }
 
-  var indexOfFirstVowel = function(word){
-    var index = /[aeiou]/i.exec(word);
-    return index;
+  var pigLatinTranslator = function(word){
+    var addAy = "";///word;
+    var vIndex =0;
+    try {
+     vIndex = indexOfFirstVowel(word);
+     var slicedWord = word.slice(vIndex);
+     var cutConsonant = word.slice(0,vIndex);
+    }catch(err){
+      vIndex=-1;
+    }
+    if (vIndex === 0) {
+      return word.concat("ay");
+    } else if(vIndex>0 ){ //or before NULL
+
+      if(cutConsonant.search("q")>-1){
+        return slicedWord.substring(1).concat(cutConsonant + "uay");
+      }
+      return slicedWord.concat(cutConsonant + "ay");
+    }else if(isDigit(word)){
+      return word;
+    }else{
+      return word.concat("ay");
+    }
   }
+
+  var joinSentence =function(sentence){
+    var sentenceArray = sentence.split(' ');
+    var translatedSentence = "";
+    sentenceArray.forEach(function(word){
+      translatedSentence +=pigLatinTranslator(word)+ " ";
+      console.log(translatedSentence);
+    });
+    //var translatedSentence = sentenceArray.join(" ");
+    return translatedSentence;
+  }
+
+
+
+  // user interface
+  $(document).ready(function(){
+    $("#pig-latin").submit(function(event){
+      event.preventDefault();
+      var userInput = $("#words").val();
+      var pigLatin = joinSentence(userInput);
+      $("#showpiglatin").text(pigLatin);
+    })
+  })
