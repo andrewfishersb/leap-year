@@ -1,7 +1,6 @@
 // business logic
 var leapYear = function(year){
   if ((year > 0)&&(year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)&&(year>0)) {
-    console.log(year);
     return true;
 
   } else {
@@ -28,3 +27,19 @@ $(document).ready(function(){
     $("#result").show();
   });
 });
+
+// business logic Pig Latin
+  var isDigit = function(characters){
+    var reg = /\d/;
+    if(characters.search(reg)!== -1){
+      return true;
+    }else{
+      return false;
+    }
+    //need to figure out how to work when with words
+  }
+
+  var indexOfFirstVowel = function(word){
+    var index = /[aeiou]/i.exec(word);
+    return index;
+  }
