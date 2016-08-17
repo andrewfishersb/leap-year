@@ -46,7 +46,7 @@ $(document).ready(function(){
   }
 
   var pigLatinTranslator = function(word){
-    var addAy = "";///word;
+    var addAy = "";
     var vIndex =0;
     try {
      vIndex = indexOfFirstVowel(word);
@@ -57,7 +57,7 @@ $(document).ready(function(){
     }
     if (vIndex === 0) {
       return word.concat("ay");
-    } else if(vIndex>0 ){ //or before NULL
+    } else if(vIndex>0 ){ 
 
       if(cutConsonant.search("q")>-1){
         return slicedWord.substring(1).concat(cutConsonant + "uay");
@@ -71,11 +71,10 @@ $(document).ready(function(){
   }
 
   var joinSentence =function(sentence){
-    var sentenceArray = sentence.split(' ');
+    var sentenceArray = sentence.split(" ");
     var translatedSentence = "";
     sentenceArray.forEach(function(word){
       translatedSentence +=pigLatinTranslator(word)+ " ";
-      console.log(translatedSentence);
     });
     //var translatedSentence = sentenceArray.join(" ");
     return translatedSentence;
@@ -89,7 +88,7 @@ $(document).ready(function(){
       event.preventDefault();
       var userInput = $("#words").val();
       var pigLatin = joinSentence(userInput);
-      $("#showpiglatin").text(pigLatin);
+      $("#showpiglatin").text(pigLatin.toLowerCase());
     })
   })
 

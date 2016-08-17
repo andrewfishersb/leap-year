@@ -1,3 +1,31 @@
+body {
+  width: 100%;
+  background-image: url("../img/pig.gif");
+  background-repeat: no-repeat;
+  background-position: top-right;
+}
+
+div {
+  margin-top: 2%;
+  padding: 2%;
+}
+
+p {
+  font-size: 2em;
+}
+
+h1 {
+  color: hotpink;
+}
+
+button {
+  background-color: pink;
+}
+
+footer {
+  text-align: center;
+}
+
 #result {
   display: none;
 }
