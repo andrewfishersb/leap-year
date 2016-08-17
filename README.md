@@ -10,10 +10,10 @@ _Three programs: Leap Year takes a year and tells you whether its a leap year. P
 
 ## Leap Year Specs
   *_The program should return when a year is not a leap year._
-  **_test_
+
 
   * _The program should return when a year is not a leap year._
-  ** _test_
+
 
 ## Setup/Installation Requirements
 
@@ -26,10 +26,10 @@ _No Known Bugs_
 
 ## Technologies Used
 
-*_HTML/CSS_
-*_Bootstrap_
-*_JavaScript_
-*_jQuery_
+* _HTML/CSS_
+* _Bootstrap_
+* _JavaScript_
+* _jQuery_
 
 ### License
 
