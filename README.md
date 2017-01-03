@@ -6,7 +6,7 @@
 
 ## Description
 
-_Three programs: Leap Year takes a year and tells you whether its a leap year. Pig Latin will take a word or sentence and change it to pig latin. Binary Converter will convert from Binary to decimal format_
+_Three programs: Leap Year takes a year and tells you whether its a leap year. Pig Latin will take a word or sentence and change it to pig latin. Binary Converter will convert from Binary to Decimal format_
 
 ## Leap Year Specs
   _The program should return when a year is not a leap year._
@@ -25,7 +25,7 @@ _The program should return 'true' for years divisible by 400, since those are le
 * _Input Example: 2000_
 * _Output Example: true_
 
-##Pig Latin Specs
+## Pig Latin Specs
 
 _1. Does nothing to non-alphabet characters._
 * _Input Example: 2_
@@ -63,21 +63,33 @@ _9. The program adds ay to multiple sentences._
 * _Input Example: Pig latin_
 * _Output Example: igpay atlinlay_
 
+## Binary Converter Specs
+
+_1. Converts a given binary string into decimal format._
+* _Input Example: 101_
+* _Output Example: 5_
+
+
 ## Setup/Installation Requirements
 
-* _Requires Bootstrap and jQuery_
-* _Clone to your computer and then edit the apps however you'd like_
+```
+ Clone from github
+ open index.html file in your prefered browser
+```
 
-## Known Bugs
+## Link
+https://andrewfishersb.github.io/leap-year/
 
-_No Known Bugs_
+
+## Further Exploration
+* prevent users from typing anything besides 1 or 0 for binary.
 
 ## Technologies Used
 
-* _HTML/CSS_
-* _Bootstrap_
 * _JavaScript_
 * _jQuery_
+* _HTML/CSS_
+* _Bootstrap_
 
 ### License
 
