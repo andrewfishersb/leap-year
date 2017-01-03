@@ -78,8 +78,7 @@ _1. Converts a given binary string into decimal format._
 ```
 
 ## Link
-https://andrewfishersb.github.io/leap-year/
-
+https://andrewfishersb.github.io/leap-year-pig-latin-binary/
 
 ## Further Exploration
 * prevent users from typing anything besides 1 or 0 for binary.
